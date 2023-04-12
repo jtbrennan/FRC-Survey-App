@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>FRC Survey Form</title>
@@ -20,9 +19,23 @@
 		<input type="number" id="teamNumber" name="teamNumber" required><br><br>
 		<label for="schoolDistrict">School District:</label>
 		<input type="text" id="schoolDistrict" name="schoolDistrict" required><br><br>
-		<label for="teamExpectation">Team Expectation:</label>
-		<textarea id="teamExpectation" name="teamExpectation" required></textarea><br><br>
+    <label for="weight">Weight</label>
+		<input type="number" id="weight" name="weight" required><br><br>
+  <br><br>
+    <label for="driveTrain">Drive Train:</label>
+		<input type="driveTrain" id="driveTrain" name="driveTrain" required><br><br>
+        <label for="pickUpMethod">Pick Up Method: </label>
+		<input type="pickUpMethod" id="pickUpMethod" name="pickUpMethod" required><br><br> 
+        <label for="autonomousRoutine">Autonomous Routine:</label>
+		<input type="autonomousRoutine" id="autonomousRoutine" name="autonomousRoutine" required><br><br> 
+        <label for="amountOfPractice">Amount Of Practice:</label>
+		<input type="amountOfPractice" id="amountOfPractice" name="amountOfPractice" required><br><br> 
+		<label for="reach">Reach:</label>
+		<textarea id="reach" name="reach" required></textarea><br><br>
+                <label for="photo">Photo Link: </label>
+		<input type="photo" id="photo" name="photo" required><br><br> 
 		<input type="submit" value="Submit">
+
 	</form>
 	<h2>Previous Submissions:</h2>
 	<ul>
@@ -199,7 +212,7 @@
 			margin-top: 50px;
 		}
 		.card {
-			max-width: 600px;
+			max-width: 800px;
 			margin: 0 auto;
 			padding: 20px;
 			background-color: #fff;
@@ -227,16 +240,25 @@
   			echo "<h3>" . $submission['teamName'] . "</h3>";
   			echo "<p>Team Number: " . $submission['teamNumber'] . "</p>";
   			echo "<p>School District: " . $submission['schoolDistrict'] . "</p>";
-  			echo "<p>Team Expectation:</p>";
-  			echo "<p>" . $submission['teamExpectation'] . "</p>";
-  			echo "</div>";
+        echo "<p>Weight:</p>";
+  			echo "<p>" . $submission['weight'] . "</p>";
+        echo "<p>Drive Train:</p>";
+  			echo "<p>" . $submission['driveTrain'] . "</p>";
+
+        echo "<p>Pick Up Method:</p>";
+  			echo "<p>" . $submission['pickUpMethod'] . "</p>";
+        echo "<p>Autonomous Routine:</p>";
+  			echo "<p>" . $submission['autonomousRoutine'] . "</p>";
+          			echo "<p>Amount Of Practice:</p>";
+  			echo "<p>" . $submission['amountOfPractice'] . "</p>";
+                  			echo "<p>Reach:</p>";
+  			echo "<p>" . $submission['reach'] . "</p>";
+                    echo "<p>Photo Link:</p>";
+  			echo "<p>" . $submission['photo'] . "</p>";
+        echo "</div>";
   		}
   		fclose($file);
   	} else {
   		echo "No previous submissions.";
   	}
   ?>
-
-	</ul>
-</body>
-</html>
