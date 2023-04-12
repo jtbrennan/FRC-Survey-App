@@ -4,7 +4,13 @@ $submission = array(
 	"teamName" => $_POST["teamName"],
 	"teamNumber" => $_POST["teamNumber"],
 	"schoolDistrict" => $_POST["schoolDistrict"],
-	"teamExpectation" => $_POST["teamExpectation"]
+  "weight" => $_POST['weight'],
+  "driveTrain" => $_POST['driveTrain'],
+  "pickUpMethod" => $_POST['pickUpMethod'],
+  "autonomousRoutine" => $_POST['autonomousRoutine'],
+  "amountOfPractice" => $_POST['amountOfPractice'],
+  "reach" => $_POST['reach'],
+  "photo" => $_POST['photo'],
 );
 
 // Open the text file for appending and save the new submission as a JSON string
